@@ -1,0 +1,37 @@
+.root {
+    font-family: Verdana, sans-serif ;
+    padding:60px;
+    width:75%;
+    min-width:600px;
+    margin:auto;
+    color:#333
+}
+
+.sub-title {
+    font-size:14px;
+    margin-left:10px;
+    margin-top:50px;
+    margin-bottom:20px;
+    font-weight: bold;
+    color:#4da368;
+}
+
+
+small {
+    padding:20px;
+    display:block;
+    margin:10px;
+    font-size:13px;
+   
+}
+
+lxx-hsl-select {
+    margin-top: 30px;
+    display:block;
+}
+
+small.code {
+    background: #f8f8f8;
+    color:#73428a;
+    border:none;
+}

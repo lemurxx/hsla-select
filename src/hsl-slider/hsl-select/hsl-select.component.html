@@ -1,0 +1,31 @@
+<div class="hsl-picker">
+  <div class="sliders">
+    <div class="slider-title">Hue</div>
+    <div class="slider-bg">
+      <div class="select-slider" [ngStyle]="huesGradient">
+        <lxx-slider [(ngModel)]="hue" min="1" max="360"></lxx-slider>
+      </div>
+    </div>
+    <div class="slider-title">Saturation</div>
+    <div class="slider-bg">
+      <div class="select-slider" [ngStyle]="saturationGradient">
+        <lxx-slider [(ngModel)]="saturation" min="0" max="100"></lxx-slider>
+      </div>
+    </div>
+    <div class="slider-title">Lightness</div>
+    <div class="slider-bg">
+      <div class="select-slider" [ngStyle]="lightnessGradient">
+        <lxx-slider [(ngModel)]="lightness" min="0" max="100"></lxx-slider>
+      </div>
+    </div>
+    <div class="slider-title">Opacity</div>
+    <div class="slider-bg">
+      <div class="select-slider" [ngStyle]="alphaGradient">
+        <lxx-slider [(ngModel)]="alpha" min="0" max="100"></lxx-slider>
+      </div>
+    </div>
+    <div class="slider-bg preview">
+      <div class="select-slider" [ngStyle]="selectedColor"></div>
+    </div>
+</div>
+</div>

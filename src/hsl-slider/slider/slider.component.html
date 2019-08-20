@@ -1,0 +1,10 @@
+<div class="slider-parent">
+  <input type="range" [min]=min [max]=max [(ngModel)]="val" (change)="change" (input)="input" [style]="style" />
+  <div>
+    <div>
+      <div class="track"></div>
+      <div class="color-track" [style.width]="(val - min) * 100 / (max-min) + '%'"></div>
+      <div class="thumb" [style.left]="(val - min) * 100 / (max-min) + '%'"></div>
+    </div>
+  </div>
+</div>

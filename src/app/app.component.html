@@ -1,20 +1,41 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="root">
+  <h3>Angular Color Selector Component</h3>
+  <div class="sub-title">Default</div>
+  <small class="code">
+    &lt;lxx-hsl-select>&lt;/lxx-hsl-select>
+  </small>
+   <lxx-hsl-select></lxx-hsl-select>
+  <div class="sub-title">From RGB object</div>
+  <small class="code">
+    &lt;lxx-hsl-select opacity=".7" [fromRgb]="&#123;r: 0, g: 100, b: 100}">&lt;/lxx-hsl-select>
+  </small>
+  <lxx-hsl-select opacity=".7" [fromRgb]="{r:0, g: 100, b: 100}"></lxx-hsl-select>
+  <div class="sub-title">From RGB string</div>
+  <small class="code">
+    private rgbStr = '&#123;"r":100, "g": 0, "b": 100}'<br><br>
+    &lt;lxx-hsl-select opacity=".7" [fromRgb]="rgbStr">&lt;/lxx-hsl-select></small>
+  <lxx-hsl-select [opacity]=".7" [fromRgb]="rgbStr"></lxx-hsl-select>
+  <div class="sub-title">With two-way bindings</div>
+  <small class="code">
+    private hue = 355;<br>
+    private saturation = 60;<br>
+    private lightness = 40;<br>
+    private opacity = 1;<br><br>
+    &lt;lxx-hsl-select [(hue)]="hue" [(saturation)]="saturation" [(lightness)]="lightness" [(opacity)]="opacity">&lt;/lxx-hsl-select>
+  </small>
+  <small>
+    Bound values (modify color with the sliders below!):<br><br>
+    Hue: {{hue}}, Saturation: {{saturation}} Lightness: {{lightness}} Opacity: {{opacity}}
+  </small>
+  <lxx-hsl-select [(hue)]="hue" [(saturation)]="saturation" [(lightness)]="lightness" [(opacity)]="opacity"></lxx-hsl-select>
+  <div class="sub-title">colorChange event</div>
+  <small class="code">
+    &lt;lxx-hsl-select (colorChange)="colorChanged($event)" opacity="0.5" [fromRgb]="rgb" >&lt;/lxx-hsl-select
+  </small>
+  <small>
+    Event argument (modify color with the sliders below!):<br><br>
+    {{color | json}}
+  </small>
+  <lxx-hsl-select (colorChange)="colorChanged($event)" opacity="0.5" [fromRgb]="rgb"></lxx-hsl-select>
 
+</div>
